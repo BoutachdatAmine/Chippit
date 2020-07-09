@@ -27,7 +27,7 @@ public class DatabaseSingleton {
     {
         try {
             if (connection == null || connection.isClosed()){
-                connection = DriverManager.getConnection("jdbc:mysql://dt5.ehb.be/1920PROGPROJ_GR6", "1920PROGPROJ_GR6", "YWfgAwH");
+                connection = DriverManager.getConnection("CONNECTION URL", "USERNAME", "PASSWORD");
                 connection.setAutoCommit(true);
             }
         } catch (SQLException e) {
