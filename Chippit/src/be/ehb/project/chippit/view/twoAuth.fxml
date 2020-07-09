@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="627.0" prefWidth="1316.0" stylesheets="@css/app.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ehb.project.chippit.controller.AuthenticationUIController">
+   <children>
+      <ImageView fitHeight="58.0" fitWidth="142.0" layoutX="610.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logoBlue.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="passwordInput" layoutX="533.0" layoutY="290.0" prefHeight="27.0" prefWidth="289.0" promptText="CH-343-SDF" styleClass="inputText">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+         </padding>
+      </TextField>
+      <Label layoutX="536.0" layoutY="267.0" text="Two factor Authentication">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="534.0" layoutY="332.0" mnemonicParsing="false" onAction="#sendPassword" prefHeight="27.0" prefWidth="289.0" stylesheets="@css/app.css" text="SEND" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="491.0" layoutY="479.0" mnemonicParsing="false" onAction="#goToLogin" styleClass="noBG-button" text="&lt;&lt; Back" underline="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="message" layoutX="635.0" layoutY="389.0" prefHeight="17.0" prefWidth="104.0" />
+   </children>
+</AnchorPane>

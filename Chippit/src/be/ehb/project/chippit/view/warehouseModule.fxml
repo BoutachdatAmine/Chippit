@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="627.0" prefWidth="1316.0" stylesheets="@css/app.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ehb.project.chippit.controller.WarehouseUIController">
+    <children>
+        <AnchorPane prefHeight="629.0" prefWidth="239.0" style="-fx-background-color: #373F51;">
+            <children>
+
+                <Button alignment="CENTER" layoutX="44.0" layoutY="133.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Home" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutX="43.0" layoutY="173.0" mnemonicParsing="false" onAction="#goToCustomers" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Customers" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutX="44.0" layoutY="212.0" mnemonicParsing="false" onAction="#goToWarehouse" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Warehouse" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutX="45.0" layoutY="251.0" mnemonicParsing="false" onAction="#goToFinance" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Finance" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutX="47.0" layoutY="290.0" mnemonicParsing="false" onAction="#goToMarketing" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Marketing" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutX="47.0" layoutY="330.0" mnemonicParsing="false" onAction="#goToShop" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Shop" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="62.0" fitWidth="147.0" layoutX="47.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/logoColor.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="239.0" prefHeight="49.0" prefWidth="1077.0" styleClass="header" />
+        <AnchorPane layoutX="269.0" layoutY="123.0" prefHeight="150.0" prefWidth="150.0">
+            <children>
+                <Label layoutX="8.0" layoutY="75.0" text="Product name" textFill="#373f51">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Label>
+                <Label fx:id="countCustomers" layoutX="8.0" layoutY="110.0" text="€110.99" textFill="#a8a8a8">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+            <effect>
+                <DropShadow color="#0000004e" height="30.11" radius="11.5175" spread="0.14" width="17.96" />
+            </effect>
+            <styleClass>
+                <String fx:value="valueBox" />
+                <String fx:value="squar-valueBox" />
+            </styleClass>
+        </AnchorPane>
+        <Label layoutX="269.0" layoutY="80.0" text="Best sellers" textFill="#a8a8a8">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="267.0" layoutY="301.0" prefHeight="305.0" prefWidth="489.0" styleClass="valueBox">
+            <children>
+                <Label layoutX="49.0" layoutY="18.0" prefHeight="30.0" prefWidth="170.0" text="Import products" textFill="#a8a8a8">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Button fx:id="fileChooser" layoutX="394.0" layoutY="59.0" mnemonicParsing="false" onAction="#goToFiles" prefHeight="30.0" prefWidth="46.0" style="-fx-background-color: #e3e5e6;" text="..." />
+                <TextField fx:id="fileToSend" layoutX="49.0" layoutY="59.0" prefHeight="30.0" prefWidth="310.0" promptText="Choose an Excel or CSV file" />
+                <Button layoutX="49.0" layoutY="106.0" mnemonicParsing="false" onAction="#sendToDatabase" prefHeight="30.0" prefWidth="391.0" text="Import product data to database" textFill="WHITE" />
+                <Button layoutX="49.0" layoutY="207.0" mnemonicParsing="false" onAction="#createExcel" prefHeight="30.0" prefWidth="391.0" text="Create Excel file with all product data" textFill="WHITE" />
+                <Button layoutX="49.0" layoutY="257.0" mnemonicParsing="false" onAction="#createCsv" prefHeight="30.0" prefWidth="391.0" text="Create CSV file with all product data" textFill="WHITE" />
+                <Label layoutX="49.0" layoutY="163.0" prefHeight="30.0" prefWidth="170.0" text="Export products" textFill="#a8a8a8">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="770.0" layoutY="64.0" prefHeight="551.0" prefWidth="532.0" styleClass="valueBox">
+            <children>
+                <TableView fx:id="productTable" editable="false" layoutX="14.0" layoutY="46.0" onMouseClicked="#selectProduct" prefHeight="490.0" prefWidth="511.0">
+                    <columns>
+                        <TableColumn fx:id="productID" prefWidth="67.333251953125" text="ID" />
+                        <TableColumn fx:id="productName" prefWidth="127.333251953125" text="Product name" />
+                        <TableColumn fx:id="productPrice" minWidth="5.0" prefWidth="101.9998779296875" text="Price" />
+                        <TableColumn fx:id="quantity" minWidth="0.0" prefWidth="79.3333740234375" text="Quantity" />
+                        <TableColumn fx:id="manufacturer" prefWidth="131.6666259765625" text="Manufacturer" />
+                    </columns>
+                </TableView>
+                <Label layoutX="14.0" layoutY="14.0" text="Warehouse" textFill="#a8a8a8">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Button layoutX="354.0" layoutY="10.0" mnemonicParsing="false" onAction="#createProduct" style="-fx-border-color: #e8e4e3;" styleClass="noBG-button" text="Create" textFill="#373f51" />
+                <Button layoutX="413.0" layoutY="10.0" mnemonicParsing="false" onAction="#updateProduct" prefHeight="29.0" prefWidth="56.0" style="-fx-border-color: #e8e4e3;" styleClass="noBG-button" text="Update" textFill="#373f51" />
+                <Button layoutX="479.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteProduct" style="-fx-border-color: #e8e4e3;" styleClass="noBG-button" text="Delete" textFill="#373f51" />
+            <Button layoutX="480.0" layoutY="534.0" mnemonicParsing="false" onAction="#refreshTable" prefHeight="0.0" prefWidth="43.0" styleClass="noBG-button" text="Refresh" textFill="#373f51" underline="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="260.0" layoutY="10.0" mnemonicParsing="false" onAction="#generateQr" style="-fx-border-color: #e8e4e3;" styleClass="noBG-button" text="Generate QR" textFill="#373f51" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="436.0" layoutY="122.0" prefHeight="150.0" prefWidth="150.0">
+            <children>
+                <Label layoutX="8.0" layoutY="75.0" text="Product name" textFill="#373f51">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Label>
+                <Label fx:id="countCustomers1" layoutX="8.0" layoutY="110.0" text="€110.99" textFill="#a8a8a8">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+            <effect>
+                <DropShadow color="#0000004e" height="30.11" radius="11.5175" spread="0.14" width="17.96" />
+            </effect>
+            <styleClass>
+                <String fx:value="valueBox" />
+                <String fx:value="squar-valueBox" />
+            </styleClass>
+        </AnchorPane>
+        <AnchorPane layoutX="602.0" layoutY="122.0" prefHeight="150.0" prefWidth="150.0">
+            <children>
+                <Label layoutX="8.0" layoutY="75.0" text="Product name" textFill="#373f51">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Label>
+                <Label fx:id="countCustomers11" layoutX="8.0" layoutY="110.0" text="€110.99" textFill="#a8a8a8">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+            <effect>
+                <DropShadow color="#0000004e" height="30.11" radius="11.5175" spread="0.14" width="17.96" />
+            </effect>
+            <styleClass>
+                <String fx:value="valueBox" />
+                <String fx:value="squar-valueBox" />
+            </styleClass>
+        </AnchorPane>
+    </children>
+</AnchorPane>

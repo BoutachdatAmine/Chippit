@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="627.0" prefWidth="1316.0" stylesheets="@css/app.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ehb.project.chippit.controller.UpdateCategoryUIController">
+    <children>
+        <AnchorPane prefHeight="64.0" prefWidth="1316.0" styleClass="headerBrand">
+            <children>
+                <ImageView fitHeight="44.0" fitWidth="141.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/logoColor.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <Label layoutX="469.0" layoutY="123.0" text="Update Category" textFill="#9e9e9e">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="463.0" layoutY="157.0" prefHeight="157.0" prefWidth="391.0" styleClass="header">
+            <children>
+                <TextField fx:id="categoryName" layoutX="14.0" layoutY="40.0" prefHeight="29.0" prefWidth="350.0" promptText="Tech" styleClass="inputText" />
+                <Label layoutX="14.0" layoutY="21.0" text="Category name" />
+                <Button layoutX="230.0" layoutY="104.0" mnemonicParsing="false" onAction="#updateCategory" prefHeight="27.0" prefWidth="133.0" text="Update Category" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </AnchorPane>
+        <Button layoutX="14.0" layoutY="586.0" mnemonicParsing="false" onAction="#goToShop" styleClass="noBG-button" text="&lt;&lt;  Back" underline="true" />
+        <Button layoutX="770.0" layoutY="123.0" mnemonicParsing="false" onAction="#setOldData" text="Load old data" textFill="WHITE" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="627.0" prefWidth="1316.0" stylesheets="@css/app.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ehb.project.chippit.controller.UpdateProductUIController">
+    <children>
+        <AnchorPane prefHeight="64.0" prefWidth="1316.0" styleClass="headerBrand">
+            <children>
+                <ImageView fitHeight="44.0" fitWidth="141.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/logoColor.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <Label layoutX="376.0" layoutY="73.0" text="Update Product" textFill="#9e9e9e">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="367.0" layoutY="107.0" prefHeight="506.0" prefWidth="587.0" styleClass="header">
+            <children>
+                <Label layoutX="14.0" layoutY="10.0" text="Product name" />
+                <TextField fx:id="productName" layoutX="14.0" layoutY="29.0" prefHeight="29.0" prefWidth="358.0" promptText="Stan Smith x Raf Simons" styleClass="inputText" />
+                <Label layoutX="380.0" layoutY="10.0" text="Quantity" />
+                <TextField fx:id="productQuantity" layoutX="385.0" layoutY="29.0" prefHeight="29.0" prefWidth="181.0" promptText="214" styleClass="inputText" />
+                <Label layoutX="14.0" layoutY="65.0" text="Manufacturer" />
+                <TextField fx:id="productManufacturer" layoutX="14.0" layoutY="84.0" prefHeight="29.0" prefWidth="196.0" promptText="Adidas" styleClass="inputText" />
+                <Label layoutX="219.0" layoutY="65.0" text="Price" />
+                <TextField fx:id="productPrice" layoutX="219.0" layoutY="84.0" prefHeight="29.0" prefWidth="116.0" promptText="€220" styleClass="inputText" />
+                <Label layoutX="343.0" layoutY="65.0" text="Category" />
+                <ComboBox fx:id="categoryName" layoutX="341.0" layoutY="84.0" prefHeight="27.0" prefWidth="226.0" promptText="..." styleClass="inputText" />
+                <Label layoutX="18.0" layoutY="120.0" text="3 Keywords (Separated by ,)" />
+                <TextField fx:id="productKeywords" layoutX="16.0" layoutY="139.0" prefHeight="29.0" prefWidth="554.0" promptText="Sneakers, Hype, Tennis" styleClass="inputText" />
+                <Label layoutX="19.0" layoutY="177.0" text="Image 1" />
+                <TextField fx:id="productImg1" layoutX="18.0" layoutY="197.0" prefHeight="29.0" prefWidth="147.0" promptText="Path_to_file" styleClass="inputText" />
+                <Label layoutX="187.0" layoutY="177.0" text="Image 2" />
+                <TextField fx:id="productImg2" layoutX="186.0" layoutY="196.0" prefHeight="29.0" prefWidth="147.0" promptText="Path_to_file" styleClass="inputText" />
+                <Label layoutX="357.0" layoutY="177.0" text="Image 3" />
+                <TextField fx:id="productImg3" layoutX="356.0" layoutY="196.0" prefHeight="29.0" prefWidth="147.0" promptText="Path_to_file" styleClass="inputText" />
+                <Button fx:id="fileChooser" layoutX="525.0" layoutY="196.0" mnemonicParsing="false" onAction="#goToFiles" prefHeight="30.0" prefWidth="46.0" style="-fx-background-color: #e3e5e6;" text="..." />
+                <Label layoutX="15.0" layoutY="244.0" text="Description" />
+                <TextArea fx:id="productDescription" layoutX="12.0" layoutY="270.0" prefHeight="178.0" prefWidth="561.0" promptText="Description ..." styleClass="inputText" />
+                <CheckBox fx:id="active" layoutX="17.0" layoutY="476.0" mnemonicParsing="false" text="Active" />
+                <Button layoutX="458.0" layoutY="468.0" mnemonicParsing="false" onAction="#updateProduct" prefHeight="27.0" prefWidth="103.0" text="Update product" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+              <Label layoutX="515.0" layoutY="177.0" text="Select 3 files">
+                  <font>
+                      <Font size="10.0" />
+                  </font>
+              </Label>
+            </children>
+        </AnchorPane>
+        <Button layoutX="14.0" layoutY="586.0" mnemonicParsing="false" onAction="#goToWarehouse" styleClass="noBG-button" text="&lt;&lt; Back" underline="true" />
+        <Button layoutX="849.0" layoutY="74.0" mnemonicParsing="false" onAction="#setOldData" text="Load old Data" textFill="WHITE" />
+    </children>
+</AnchorPane>

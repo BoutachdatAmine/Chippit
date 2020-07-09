@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="627.0" prefWidth="1316.0" stylesheets="@css/app.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ehb.project.chippit.controller.ShopUIController">
+    <children>
+        <AnchorPane prefHeight="629.0" prefWidth="239.0" style="-fx-background-color: #373F51;">
+            <children>
+                <ImageView fitHeight="62.0" fitWidth="147.0" layoutX="47.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/logoColor.png" />
+                    </image>
+                </ImageView>
+                <Button alignment="CENTER" layoutX="44.0" layoutY="133.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Home" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutX="43.0" layoutY="173.0" mnemonicParsing="false" onAction="#goToCustomers" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Customers" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutX="44.0" layoutY="212.0" mnemonicParsing="false" onAction="#goToWarehouse" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Warehouse" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutX="45.0" layoutY="251.0" mnemonicParsing="false" onAction="#goToFinance" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Finance" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutX="47.0" layoutY="290.0" mnemonicParsing="false" onAction="#goToMarketing" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Marketing" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutX="47.0" layoutY="330.0" mnemonicParsing="false" onAction="#goToShop" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Shop" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="239.0" prefHeight="49.0" prefWidth="1077.0" styleClass="header" />
+        <AnchorPane layoutX="282.0" layoutY="73.0" prefHeight="540.0" prefWidth="1023.0">
+            <children>
+                <Label layoutX="4.0" layoutY="-5.0" text="Employees" textFill="#a8a8a8">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="employeesTable" editable="false" layoutX="5.0" layoutY="36.0" onMouseClicked="#selectEmployee" prefHeight="379.0" prefWidth="798.0">
+                    <columns>
+                        <TableColumn fx:id="employeeID" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="employeeFirstName" prefWidth="175.33331298828125" text="First name" />
+                        <TableColumn fx:id="employeeLastName" minWidth="5.0" prefWidth="160.0" text="Last name" />
+                        <TableColumn fx:id="gender" prefWidth="97.6666259765625" text="Gender" />
+                        <TableColumn fx:id="email" minWidth="0.0" prefWidth="197.666748046875" text="Email" />
+                        <TableColumn fx:id="permission" minWidth="1.0" prefWidth="89.0" text="Permission" />
+                    </columns>
+                </TableView>
+                <Button layoutX="371.0" mnemonicParsing="false" onAction="#createEmployee" style="-fx-border-color: #e8e4e3;" styleClass="noBG-button" text="Create" textFill="#373f51" />
+                <Button layoutX="440.0" mnemonicParsing="false" onAction="#deleteEmployee" style="-fx-border-color: #e8e4e3;" styleClass="noBG-button" text="Delete" textFill="#373f51" />
+                <Button layoutX="506.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="29.0" prefWidth="58.0" style="-fx-border-color: #e8e4e3;" styleClass="noBG-button" text="Update" textFill="#373f51" />
+                <Button layoutX="969.0" layoutY="527.0" mnemonicParsing="false" onAction="#refreshTable" prefHeight="12.0" prefWidth="43.0" styleClass="noBG-button" text="Refresh" textFill="#373f51" underline="true">
+                    <font>
+                        <Font size="9.0" />
+                    </font>
+                </Button>
+                <TableView fx:id="categoriesTable" layoutX="813.0" layoutY="36.0" onMouseClicked="#selectCategory" prefHeight="492.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="categoryName" prefWidth="198.0" text="Categoryname" />
+                    </columns>
+                </TableView>
+                <Button layoutX="820.0" mnemonicParsing="false" onAction="#createCategory" style="-fx-border-color: #e8e4e3;" styleClass="noBG-button" text="Create" textFill="#373f51" />
+                <Button layoutX="889.0" mnemonicParsing="false" onAction="#deleteCategory" style="-fx-border-color: #e8e4e3;" styleClass="noBG-button" text="Delete" textFill="#373f51" />
+                <Button layoutX="955.0" mnemonicParsing="false" onAction="#updateCategory" prefHeight="29.0" prefWidth="58.0" style="-fx-border-color: #e8e4e3;" styleClass="noBG-button" text="Update" textFill="#373f51" />
+                <TextField fx:id="fileToSend" layoutX="5.0" layoutY="463.0" prefHeight="30.0" prefWidth="455.0" promptText="Choose an Excel or CSV file" />
+                <Button fx:id="fileChooser" layoutX="489.0" layoutY="461.0" mnemonicParsing="false" onAction="#goToFiles" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #e3e5e6;" text="..." />
+                <Button layoutX="4.0" layoutY="503.0" mnemonicParsing="false" onAction="#sendToDatabase" prefHeight="30.0" prefWidth="527.0" text="Import employee data to database" textFill="WHITE" />
+                <Button layoutX="561.0" layoutY="463.0" mnemonicParsing="false" onAction="#createExcel" prefHeight="30.0" prefWidth="239.0" text="Create Excel file with all employee data" textFill="WHITE" />
+                <Button layoutX="561.0" layoutY="503.0" mnemonicParsing="false" onAction="#createCsv" prefHeight="30.0" prefWidth="239.0" text="Create CSV file with all employee data" textFill="WHITE" />
+                <Label layoutX="5.0" layoutY="421.0" text="Import employees" textFill="#a8a8a8">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="559.0" layoutY="421.0" text="Export employees" textFill="#a8a8a8">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+            </children></AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="1316.0" stylesheets="@css/app.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ehb.project.chippit.controller.UpdateUserUIController">
+    <children>
+        <AnchorPane prefHeight="64.0" prefWidth="1316.0" styleClass="headerBrand">
+            <children>
+                <ImageView fitHeight="44.0" fitWidth="141.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/logoColor.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <Label layoutX="377.0" layoutY="74.0" text="Update User" textFill="#9e9e9e">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="367.0" layoutY="108.0" prefHeight="505.0" prefWidth="587.0" styleClass="header">
+            <children>
+                <Label layoutX="14.0" layoutY="21.0" text="First name" />
+                <TextField fx:id="firstName" layoutX="14.0" layoutY="40.0" prefHeight="29.0" prefWidth="260.0" promptText="Harry" styleClass="inputText" />
+                <Label layoutX="301.0" layoutY="21.0" text="Last name" />
+                <TextField fx:id="lastName" layoutX="301.0" layoutY="40.0" prefHeight="29.0" prefWidth="260.0" promptText="Potter" styleClass="inputText" />
+                <Label layoutX="14.0" layoutY="78.0" text="Gender" />
+                <Label layoutX="301.0" layoutY="77.0" text="Birthdate" />
+                <ComboBox fx:id="gender" layoutX="12.0" layoutY="99.0" prefHeight="27.0" prefWidth="260.0" promptText="..." />
+                <DatePicker fx:id="birthdate" layoutX="299.0" layoutY="97.0" prefHeight="27.0" prefWidth="260.0" promptText="09/03/1999" styleClass="inputText" />
+                <Label layoutX="16.0" layoutY="135.0" text="Permission" />
+                <ComboBox fx:id="permission" layoutX="14.0" layoutY="153.0" prefHeight="27.0" prefWidth="185.0" promptText="..." />
+                <Label layoutX="211.0" layoutY="135.0" text="Password" />
+                <TextField fx:id="password" layoutX="212.0" layoutY="152.0" prefHeight="29.0" prefWidth="195.0" promptText="Efljkh342jd_jd*" styleClass="inputText" />
+                <Button fx:id="generate" layoutX="421.0" layoutY="151.0" mnemonicParsing="false" onAction="#generatePassword" prefHeight="27.0" prefWidth="140.0" text="Generate Password" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Label layoutX="15.0" layoutY="185.0" text="Two factor Authentication unique code" />
+                <TextField fx:id="googlePassword" layoutX="16.0" layoutY="202.0" prefHeight="29.0" prefWidth="393.0" promptText="SKDI837EHDF62JF7" styleClass="inputText" />
+                <Button fx:id="generateGoogle" layoutX="421.0" layoutY="202.0" mnemonicParsing="false" onAction="#generateGooglePassword" prefHeight="27.0" prefWidth="140.0" text="Generate Google TFA" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Label layoutX="14.0" layoutY="236.0" text="Email" />
+                <TextField fx:id="email" layoutX="14.0" layoutY="255.0" prefHeight="29.0" prefWidth="260.0" promptText="harry.potter@hogward.wiz" styleClass="inputText" />
+                <Label layoutX="301.0" layoutY="236.0" text="Phone" />
+                <TextField fx:id="phone" layoutX="301.0" layoutY="255.0" prefHeight="29.0" prefWidth="260.0" promptText="0489027930" styleClass="inputText" />
+                <Label layoutX="15.0" layoutY="290.0" text="Address 1" />
+                <TextField fx:id="address1" layoutX="15.0" layoutY="309.0" prefHeight="29.0" prefWidth="547.0" promptText="Patform 9 3/4" styleClass="inputText" />
+                <Label layoutX="15.0" layoutY="346.0" text="Address 2" />
+                <TextField fx:id="address2" layoutX="15.0" layoutY="365.0" prefHeight="29.0" prefWidth="260.0" promptText="King’s Cross" styleClass="inputText" />
+                <Label layoutX="301.0" layoutY="345.0" text="Postal Code" />
+                <TextField fx:id="postalCode" layoutX="301.0" layoutY="364.0" prefHeight="29.0" prefWidth="260.0" promptText="1000" styleClass="inputText" />
+                <Label layoutX="15.0" layoutY="403.0" text="City" />
+                <TextField fx:id="city" layoutX="15.0" layoutY="422.0" prefHeight="29.0" prefWidth="260.0" promptText="London" styleClass="inputText" />
+                <Label layoutX="302.0" layoutY="403.0" text="Country" />
+                <TextField fx:id="country" layoutX="302.0" layoutY="422.0" prefHeight="29.0" prefWidth="260.0" promptText="United Kingdom" styleClass="inputText" />
+                <CheckBox fx:id="marketingBool" layoutX="17.0" layoutY="469.0" mnemonicParsing="false" text="Marketing" />
+                <Button layoutX="458.0" layoutY="463.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="27.0" prefWidth="103.0" text="Update user" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </AnchorPane>
+        <Button layoutX="842.0" layoutY="75.0" mnemonicParsing="false" onAction="#setOldData" text="Load old data" textAlignment="RIGHT" textFill="WHITE" />
+        <ImageView fx:id="qrCode" fitHeight="200.0" fitWidth="200.0" layoutX="1033.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true" />
+        <Button layoutX="14.0" layoutY="586.0" mnemonicParsing="false" onAction="#goToShop" styleClass="noBG-button" text="&lt;&lt; Back" underline="true" />
+    </children>
+</AnchorPane>

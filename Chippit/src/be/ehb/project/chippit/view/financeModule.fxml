@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="627.0" prefWidth="1316.0" stylesheets="@css/app.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ehb.project.chippit.controller.FinanceUIController">
+    <children>
+        <AnchorPane prefHeight="629.0" prefWidth="239.0" style="-fx-background-color: #373F51;">
+            <children>
+                <ImageView fitHeight="62.0" fitWidth="147.0" layoutX="47.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/logoColor.png" />
+                    </image>
+                </ImageView>
+                <Button alignment="CENTER" layoutX="44.0" layoutY="133.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Home" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutX="43.0" layoutY="173.0" mnemonicParsing="false" onAction="#goToCustomers" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Customers" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutX="44.0" layoutY="212.0" mnemonicParsing="false" onAction="#goToWarehouse" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Warehouse" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutX="45.0" layoutY="251.0" mnemonicParsing="false" onAction="#goToFinance" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Finance" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutX="47.0" layoutY="290.0" mnemonicParsing="false" onAction="#goToMarketing" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Marketing" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutX="47.0" layoutY="330.0" mnemonicParsing="false" onAction="#goToShop" prefHeight="27.0" prefWidth="150.0" styleClass="navBtn" text="Shop" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="239.0" prefHeight="49.0" prefWidth="1077.0" styleClass="header" />
+        <Label layoutX="277.0" layoutY="75.0" text="Orders" textFill="#a8a8a8">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+      <TableView fx:id="ordersTable" layoutX="277.0" layoutY="114.0" onMouseClicked="#selectOrder" prefHeight="484.0" prefWidth="230.0">
+         <columns>
+            <TableColumn fx:id="ID" prefWidth="61.3333740234375" text="ID" />
+            <TableColumn fx:id="customerID" prefWidth="89.333251953125" text="Customer ID" />
+            <TableColumn fx:id="totalPrice" prefWidth="75.33334350585938" text="Total price" />
+         </columns>
+      </TableView>
+      <TableView fx:id="orderProductsTable" layoutX="556.0" layoutY="114.0" prefHeight="484.0" prefWidth="361.0">
+         <columns>
+            <TableColumn fx:id="orderProductID" prefWidth="61.3333740234375" text="ID" />
+            <TableColumn fx:id="orderID" prefWidth="89.333251953125" text="Order ID" />
+            <TableColumn fx:id="productID" prefWidth="89.333251953125" text="Product ID" />
+            <TableColumn fx:id="quantity" prefWidth="119.333251953125" text="Quantity" />
+         </columns>
+      </TableView>
+      <Label layoutX="556.0" layoutY="75.0" text="Order Product" textFill="#a8a8a8">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="990.0" layoutY="244.0" mnemonicParsing="false" onAction="#createExcel" prefHeight="30.0" prefWidth="268.0" text="Create Excel file with all order data" textFill="WHITE" />
+      <Button layoutX="990.0" layoutY="284.0" mnemonicParsing="false" onAction="#createCsv" prefHeight="30.0" prefWidth="268.0" text="Create CSV file with all order data" textFill="WHITE" />
+      <Label layoutX="988.0" layoutY="202.0" text="Export orders" textFill="#a8a8a8">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="989.0" layoutY="120.0" mnemonicParsing="false" onAction="#generateQr" prefHeight="30.0" prefWidth="268.0" text="Generate invoice" textFill="WHITE" />
+      <Label layoutX="987.0" layoutY="78.0" text="Order QR" textFill="#a8a8a8">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
